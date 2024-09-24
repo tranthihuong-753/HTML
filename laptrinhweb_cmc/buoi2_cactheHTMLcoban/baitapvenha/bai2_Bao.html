@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .article {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 calc(30% - 20px); 
+        }
+        .article h2 {
+            margin-top: 0;
+        }
+        .article p {
+            color: #555;
+        }
+        .highlighted-articles {
+            background: #e9ecef;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .highlighted-articles ul {
+            list-style-type: none; /* Không hiển thị dấu chấm */
+            padding: 0;
+        }
+        .highlighted-articles li {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #35424a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Báo Nhà Trồng</h1>
+    <p>Cập nhật tin tức mới nhất từ mọi dòng code, mọi công thức xác suất thống kê</p>
+    <p>Chúng tôi luôn đảm bảo mang lại cho bạn những trải nghiệm thú vị nhất</p>
+    <p><small>Hà Đông, ngày </small><small id="homnay"></small></p>
+</header>
+
+<main class="container">
+    <div class="highlighted-articles">
+        <h2>Bài Viết Nổi Bật</h2>
+        <ul>
+            <li>
+                <h3>Bài Viết Nổi Bật 1</h3>
+                <p>Nội dung của bài viết nổi bật 1. Đây là những thông tin rất quan trọng.</p>
+            </li>
+            <li>
+                <h3>Bài Viết Nổi Bật 2</h3>
+                <p>Nội dung của bài viết nổi bật 2. Đây là thông tin hữu ích cho độc giả.</p>
+            </li>
+            <li>
+                <h3>Bài Viết Nổi Bật 3</h3>
+                <p>Nội dung của bài viết nổi bật 3. Thông tin này sẽ giúp độc giả nắm bắt được tình hình mới nhất.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="article">
+        <h2>Bài Báo 1</h2>
+        <p>Đây là nội dung của bài báo đầu tiên. Nó chứa thông tin quan trọng về sự kiện gần đây.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 2</h2>
+        <p>Đây là nội dung của bài báo thứ hai. Nội dung này cũng rất thú vị và đáng chú ý.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 3</h2>
+        <p>Nội dung của bài báo thứ ba sẽ nói về một chủ đề khác, mang lại nhiều thông tin cho độc giả.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 4</h2>
+        <p>Bài báo thứ tư sẽ cung cấp thông tin bổ ích và cập nhật về các sự kiện mới.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 5</h2>
+        <p>Bài báo thứ năm chứa nhiều thông tin thú vị và hấp dẫn cho người đọc.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 6</h2>
+        <p>Bài báo thứ sáu cũng rất đáng đọc và mang lại nhiều kiến thức bổ ích.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 7</h2>
+        <p>Bài báo thứ 7 cũng rất đáng đọc và mang lại nhiều kiến thức bổ ích.</p>
+    </div>
+
+    <div class="article">
+        <h2>Bài Báo 8</h2>
+        <p>Bài báo thứ 8 cũng rất đáng đọc và mang lại nhiều kiến thức bổ ích.</p>
+    </div>
+</main>
+
+<footer>
+    <p>Nếu quý khách có câu hỏi gì xin tự tra cứu</p>
+    <p>Không có thông tin liên hệ, xin chân thành cảm ơn</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+    var date = new Date();
+    var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    document.getElementById("homnay").innerHTML = date;
+</script>

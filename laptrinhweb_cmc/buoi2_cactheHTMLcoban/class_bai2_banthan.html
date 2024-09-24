@@ -1,0 +1,49 @@
+<div id="loichao"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My with Friends</title>
+    <style id="body">
+        body{
+            background-color:#fecbcb;
+        }
+    </style>
+    <style id="header">
+        header{
+            background-color: #000000;
+            color:#fecbcb;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rau muống Rau xà lách Rau bí ngô</h1>
+        <p id="get_ten"></p>
+        <p style="color:black">Không có ny thì đi kiếm đi, ngồi đây chi</p>
+    </header>
+    <main>
+        <div>
+            
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+<script>
+    // Sử dụng window.prompt để lấy input từ người dùng
+    var name = window.prompt("RiRiiiiiiiiii ơi. Tên của cậu là gì á?");
+    // Nếu người dùng không nhập gì hoặc nhấn "Cancel", gán giá trị mặc định là "RiRi"
+    if (!name) {
+        name = "RiRi";
+    }
+    // Gán giá trị vế phải cho thẻ có id="get_ten"
+    document.getElementById("get_ten").innerText = "Chào " + name;
+    var qes_name = "Viết cho tôi một lời chào mang tính chất vui vẻ hài hước với người bạn tên " + name;
+</script>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop hoa tươi</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #a2b2c6;
+            }
+            h2 {
+                color: #856fff;
+                font-size: 2em;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            table, th, td {
+                border: 1px solid #ddd;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                background-color: #9f57a6;
+                color: white;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            input, textarea, button {
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            button {
+                background-color: #806fff;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #be5670;
+            }
+        </style>
+        <style> /*HOME Tư vấn ... */
+            #hometuvan {
+                display: flex; /* Hiển thị các phần tử a trên 1 dòng */
+                justify-content: center; /* Căn giữa tất cả các mục */
+                position: fixed; /* Cố định header khi cuộn */
+                top: 0; /* Đặt header ở trên cùng */
+                left: 0; /* Căn về bên trái */
+                width: 100%; /* Đảm bảo header bao phủ toàn bộ chiều rộng */
+                z-index: 1000; /* Đặt z-index cao để nằm trên các phần tử khác */
+                padding: 10px 0; /* Thêm khoảng trống trên và dưới */              
+            }
+            #hometuvan a {
+                font-family: 'Barlow', sans-serif; /* Sử dụng font Barlow Extra Light */
+                font-size: 20px; /* Kích cỡ chữ 30px */
+                color: #c3ddfc; /* Màu xám nhạt */
+                margin: 10px; /* Xóa khoảng cách mặc định của phần tử p */
+                text-align: center; /* Hiện text ở giữa */ 
+                text-decoration: none; /* Xóa gạch chân cho các liên kết */
+            }
+        </style>
+        <style> /*header*/
+            header {
+                padding: 70px 0;
+                text-align: center;
+                height:600px;
+                background-image: url('hoavintage.jpg');
+                background-size: cover;  /* Để ảnh trải đều trong khung */
+                background-position: center; /* Để ảnh căn giữa */
+            }
+        </style>
+        <style>
+            .timkiem{
+                display: flex;
+                justify-content:space-between; /* Cách đều giữa các nút */
+                margin: 20px; /* Khoảng cách quanh container */
+            }         
+            .botri, .quatang{
+                display: flex;
+                justify-content: space-around; /* Đặt các hình ảnh cách đều nhau */
+                align-items: flex-start; /* Đảm bảo văn bản nằm ngay dưới hình */
+                flex-wrap: wrap; /* Các phần tử sẽ xuống dòng nếu không đủ không gian */ 
+            }
+            .botri figcaption , .quatang figcaption {
+                width: 100%;
+                white-space: nowrap; /* Giữ văn bản trên một dòng */
+                overflow: hidden; /* Ẩn phần văn bản thừa */
+                text-overflow: ellipsis; /* Thêm dấu "..." nếu văn bản dài quá */
+                display: block;
+                font-size: 14px;
+                margin-top: 5px;
+                color: #8581eb;
+            }
+            .botri figure , .quatang figure{
+                width: 200px; /* Đảm bảo figure có chiều rộng cố định như hình */
+                text-align: center; /* Căn giữa văn bản bên dưới ảnh */
+                margin: 10px; /* Thêm khoảng cách giữa các figure */
+            }
+            .botri img{
+                width: 200px; /* Chiều rộng cố định */
+                height: 200px; /* Chiều cao cố định */
+                border-radius: 50%; /* Bo tròn hình ảnh */
+                object-fit: cover; /* Đảm bảo ảnh vừa khung mà không bị méo */
+                border: 3px solid rgb(255, 255, 255); /* Đường viền màu bạc xung quanh ảnh */
+            }
+            .quatang img{
+                width: 200px; /* Chiều rộng cố định */
+                height: 200px; /* Chiều cao cố định */
+                border-radius: 10%; /* Bo tròn hình ảnh */
+                object-fit: cover; /* Đảm bảo ảnh vừa khung mà không bị méo */
+                border: 3px solid rgb(0, 103, 247); /* Đường viền màu bạc xung quanh ảnh */
+            }
+            section{
+                padding: 20px;
+                max-width: 800px;
+                margin: 20px auto;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        <style> /* Trái tim động */ 
+            #hotline {
+                text-align:end;
+                font-family: 'Courier New', Courier, monospace;
+                position: relative; /* Để đảm bảo trái tim không bị tràn ra ngoài */
+                overflow: hidden; /* Để đảm bảo trái tim không bị tràn ra ngoài */
+                font-size: 1.5em;
+            }
+
+            /* Tạo khung chứa các trái tim */
+            .hearts-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none; /* Đảm bảo các trái tim không ảnh hưởng đến thao tác người dùng */
+            }
+
+            /* Tạo hình trái tim */
+            .heart {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background: url('https://img.icons8.com/emoji/48/heart-suit.png'); /* Hình trái tim */
+                background-size: cover;
+                animation: fall 5s linear infinite; /* Animation rơi xuống */
+                opacity: 0.8;
+            }
+
+            /* Tạo animation rơi */
+            @keyframes fall {
+                0% {
+                    transform: translateY(-100px) rotate(0deg); /* Bắt đầu từ trên cùng */
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(600px) rotate(360deg); /* Rơi xuống cuối */
+                    opacity: 0; /* Dần biến mất */
+                }
+            }
+
+            /* Tạo nhiều trái tim với các vị trí và tốc độ khác nhau */
+            .heart:nth-child(1) {
+                left: 10%;
+                animation-duration: 4s;
+            }
+
+            .heart:nth-child(2) {
+                left: 20%;
+                animation-duration: 6s;
+            }
+
+            .heart:nth-child(3) {
+                left: 30%;
+                animation-duration: 5s;
+            }
+
+            .heart:nth-child(4) {
+                left: 40%;
+                animation-duration: 7s;
+            }
+
+            .heart:nth-child(5) {
+                left: 50%;
+                animation-duration: 3.5s;
+            }
+
+            .heart:nth-child(6) {
+                left: 60%;
+                animation-duration: 6.5s;
+            }
+
+            .heart:nth-child(7) {
+                left: 70%;
+                animation-duration: 4.5s;
+            }
+
+            .heart:nth-child(8) {
+                left: 80%;
+                animation-duration: 5.5s;
+            }
+
+            .heart:nth-child(9) {
+                left: 90%;
+                animation-duration: 7.5s;
+            }
+        </style>
+        <style>
+            footer{
+                background-color: rgb(81, 77, 77);
+                color: rgb(199, 80, 80);
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="hometuvan">
+            <a href="#m1">HOME</a>
+            <a href="#m2">Tư vấn</a>
+            <a href="#m3">Bán chạy</a>
+            <a href="#m4">Quà tặng</a>
+            <a href="#m5">Bảng giá</a>
+            <a href="#m6">Liên hệ</a>
+        </div>
+        <header>
+            <br id="m1">
+            <h1 style="font-size: 100px;color: #9c94b6;">Hoa Tươi mỗi ngày<br></h1>
+            <p><i style="color:wheat">Rất vui vì có thể phục vụ bạn.</i></p>
+            <p><i style="color:wheat">Chúc bạn có một ngày tốt lành!</i></p>
+        </header>
+        <main>
+            <section id="hotline">
+                <div>
+                    <p>HOTLINE MIỀN NAM</p>
+                    <p style="color:rgb(230, 144, 32)">028 876 567*</p>
+                </div>
+                <div>
+                    <p>HOTLINE MIỀN BẮC</p>
+                    <p style="color:rgb(230, 144, 32)">024 726 567*</p>
+                </div>
+                <div class="hearts-container"></div> <!-- Khu vực chứa các hình trái tim -->
+            </section>
+
+            <section>
+                <br id="m2">
+                <h2>Tư vấn chọn hoa tươi</h2>
+                <div class="timkiem">
+                    <p>Chủ đề</p>
+                    <select class="options">
+                        <option>Hoa tươi xin chào</option>
+                        <option value="option1">Hoa cầu hôn</option>
+                        <option value="option2">Hoa chúc sức khỏe</option>
+                        <option value="option3">Hoa cười</option>
+                    </select>
+                </div>
+                <div class="timkiem">
+                    <p>Mức giá</p>
+                    <select class="options">
+                        <option value="option1">Dưới 200.000</option>
+                        <option value="option2">Dưới 1.000.000</option>
+                        <option value="option3">Dưới 1.000.000.000</option>
+                    </select>
+                </div>
+                <button class="timkiem">Tìm kiếm</button>
+            </section>
+
+            <section style="background-color: #5a5a5a;">
+                <br id="m3">
+                <h2>Sản phẩm bán chạy</h2>
+                <div class="botri">
+                    <figure>
+                        <img title="Hoa Hồng - Biểu tượng của tình yêu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6kOTjGDAcMN42fZ79X8XNw2PoJcR70IfsSA&s" alt="Hoa Sen">
+                        <figcaption>Hoa Hồng - Biểu tượng của tình yêu</figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Hoa Cúc - Đẹp giản dị" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSck68Qpk6ZWlQim_XbaQsLpQuv4VgAzlcSCA&s" alt="Hoa Cúc">
+                        <figcaption>Hoa Cúc - Đẹp giản dị</figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Hoa Sen - Tượng trưng cho sự thanh khiết" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmuoXEhh49hSzHAoWfO9XicnL_rwmYO0Mx0A&s" alt="Hoa Sen">
+                        <figcaption>Hoa Sen - Tượng trưng cho sự thanh khiết</figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Hoa Cẩm Tú Cầu - Mang thông điệp là một lời xin lỗi, xin tha thứ hoặc để tỏ lòng biết ơn." src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7cyJrLnVRqD5muffwQc2XlAsqvzvU_fQyA&s" alt="Hoa cẩm tú cầu">
+                        <figcaption>Hoa Cẩm Tú Cầu - Mang thông điệp là một lời xin lỗi, xin tha thứ hoặc để tỏ lòng biết ơn.</figcaption>
+                    </figure>  
+                </div>
+            </section> 
+
+            <section id="sectionqua">
+                <br id="m4">
+                <h2>Quà tặng kèm siêu đáng yêu</h2>
+                <div class="quatang">
+                    <figure>
+                        <img title="Thiệp trao tay, tình cảm cũng đong đầy qua từng câu từ." src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXjzhaLqQVaYDHFJ2LuftG6Mxl3kCg1Zqsw&s" alt="Thiệp">
+                        <figcaption>Thiệp trao tay, tình cảm cũng đong đầy qua từng câu từ.</figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Kẹp tóc cũng là món quà các nàng rất cưng nha" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTshAQAQ4r47d_xXpTTTFAP0eb2cCmWNxnxcA&s" alt="Kẹp tóc">
+                        <figcaption>Kẹp tóc cũng là món quà các nàng rất cưng nha</figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Thanh lịch, sạch sẽ, chanh sả, ai mà không mê chứ " src="https://i.pinimg.com/474x/09/3f/7c/093f7c345f34f1db44819fc9b6fc91c7.jpg" alt="Nước hoa">
+                        <figcaption>Thanh lịch, sạch sẽ, chanh sả, ai mà không mê chứ </figcaption>
+                    </figure>
+                    <figure>
+                        <img title="Kẹp sách làm từ hoa khô có sự mới mẻ, sự xinh xắn đó không ai có thể cươngx lại đâu huhuhu , hốt ẻm về đi cả nhà" src="https://i.pinimg.com/736x/05/94/55/059455f3a0fdc35f67bcb2510fe8cb7b.jpg" alt="Thẻ sách bằng hoa khô">
+                        <figcaption>Kẹp sách làm từ hoa khô có sự mới mẻ, sự xinh xắn đó không ai có thể cươngx lại đâu huhuhu , hốt ẻm về đi cả nhà</figcaption>
+                    </figure>  
+                </div>
+            </section> 
+
+            <div>
+                <br id="m5">
+                <h2>Bảng giá</h2>
+                <table>
+                    <tr>
+                        <th>Tên gói</th>
+                        <th>Giá</th>
+                        <th>Mô tả</th>
+                    </tr>
+                    <tr>
+                        <td>Gói cơ bản</td>
+                        <td>100.000.000 VNĐ</td>
+                        <td>Cơm đưa tận miệng.</td>
+                    </tr>
+                    <tr>
+                        <td>Gói nâng cao</td>
+                        <td>200.000.000 VNĐ</td>
+                        <td>Bí mật.</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <section>
+                <br id="m6">
+                <h2>Liên hệ với chúng tôi</h2>
+                <form>
+                    <label for="name">Tên của bạn:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email của bạn:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Tin nhắn của bạn:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Gửi</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright ©2015, Hoa.com, All rights reserved</p>
+        </footer>
+    </body>
+</html>
+
+<script>
+    /* Trái tim rơi  */
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.hearts-container');
+
+        // Tạo 10 trái tim
+        for (let i = 0; i < 10; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            container.appendChild(heart);
+        }
+    });
+</script>

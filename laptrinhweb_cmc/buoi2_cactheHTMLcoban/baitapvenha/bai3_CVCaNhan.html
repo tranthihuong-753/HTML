@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV Cá Nhân</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+               /*  margin: 20px;
+                padding: 20px; */
+                background-color: #767680;
+            }
+        </style>
+        <style> /* Hình ảnh chạy  */
+            .moving-image {
+                position: fixed; /* Để ảnh luôn hiển thị trên trang */
+                width: 20px; /* Chiều rộng cố định */
+                height: 20px; /* Chiều cao cố định */
+                z-index: 9999; /* Đảm bảo ảnh luôn ở trên cùng */
+                pointer-events: none; /* Để không cản trở tương tác với các phần tử khác */
+            }
+        </style>
+        <style> /* Header */
+            header {
+                display: flex; /* Hiển thị các phần tử a trên 1 dòng */
+                justify-content: center; /* Căn giữa tất cả các mục */
+                position: fixed; /* Cố định header khi cuộn */
+                top: 0; /* Đặt header ở trên cùng */
+                left: 0; /* Căn về bên trái */
+                width: 100%; /* Đảm bảo header bao phủ toàn bộ chiều rộng */
+                z-index: 1000; /* Đặt z-index cao để nằm trên các phần tử khác */
+                padding: 10px 0; /* Thêm khoảng trống trên và dưới */              
+            }
+            header a {
+                font-family: 'Barlow', sans-serif; /* Sử dụng font Barlow Extra Light */
+                font-size: 20px; /* Kích cỡ chữ 30px */
+                color: #d3d3d3; /* Màu xám nhạt */
+                margin: 5px; /* Xóa khoảng cách mặc định của phần tử p */
+                text-align: center; /* Hiện text ở giữa */ 
+                text-decoration: none; /* Xóa gạch chân cho các liên kết */
+            }
+        </style>
+        <style> /* main */
+            #main_sec1{
+                background-image: url('https://i.pinimg.com/736x/b6/d9/b7/b6d9b75d734c00a059c11475e6d6ae9c.jpg'); /* Đặt ảnh làm nền */
+                background-size: cover; /* Phủ đầy toàn bộ thẻ */
+                background-position: center; /* Căn giữa hình ảnh */
+                height: calc(100vh - 60px); /* Chiều cao full màn hình trừ đi chiều cao của header (nếu có) */
+                width: 100vw; /* Chiều rộng full màn hình */
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5); /* Màu nền đen với 50% độ trong suốt */
+                z-index: 1; /* Đảm bảo overlay nằm trên hình nền */
+            }
+
+            #duongdocxanh {
+                position: absolute; /* Định vị tuyệt đối */
+                left: 50%; /* Đặt nó ở giữa theo chiều ngang */
+                transform: translateX(-50%); /* Dịch chuyển sang trái một nửa chiều rộng của nó */
+                width: 5px; /* Chiều rộng của đường ngăn cách */
+                background-color: rgb(44, 185, 44); /* Màu xanh lá cho đường */
+                height: 450px; /* Chiều cao có thể điều chỉnh tùy ý, chú ý thẻ mẹ của nó phải có chiều cao xác định heigh:100px */     
+            }
+        </style>
+        <style> /* footer */
+            footer{
+                background-color: rgb(145, 139, 139);
+                color: rgb(0, 0, 0);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="#m1">HOME</a>
+            <a href="#m2">PROFESSIONAL</a>
+            <a href="#m3">EXPERIENCE</a>
+            <a href="#f1">CONTACT</a>
+        </header>
+
+        <main>
+            <div id="m1" style="height:600px">
+                <h1 style="font-size: 100px; color:aliceblue; margin-left: 50px;"><br>I'M<br> Tran Thi Huong</h1>
+                <h2 style="font-size: 20px; color:aliceblue; margin-left: 50px;">Hello, Good Good Good</h2>
+            </div>    
+
+            <section id="main_sec1" style="height:600px">
+                <h2 style="font-family: 'Lulo Clean', sans-serif; font-size: 70px; text-align: center; color:#f7f7fa"><br id="m2">01 PROFESSIONAL</h2>
+                <p style="font-family: 'Lulo Clean', sans-serif; font-size: 30px; text-align: center; color: rgb(255, 255, 255);">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
+
+                <div class="container" style="color:aliceblue; text-align: center;">
+                    <p class="label1" style="display: inline-block;">HTML</p>
+                    <div class="line" style="width: 325px;height: 20px; background-color: green;display: inline-block;"></div>
+                    <p class="label2" style="display: inline-block;">?%</p>
+                </div>
+                <div class="container" style="color:aliceblue; text-align: center;">
+                    <p class="label2" style="display: inline-block;">MongoDB</p>
+                    <div class="line" style="width: 250px;height: 20px; background-color: green;display: inline-block;"></div> <!-- Độ rộng đường của MongoDB -->
+                    <p class="label2" style="display: inline-block;">?%</p>
+                </div>                
+                <div class="container" style="color:aliceblue; text-align: center;">
+                    <p class="label2" style="display: inline-block;">C#</p>
+                    <div class="line" style="width: 100px;height: 20px; background-color: green;display: inline-block;"></div> <!-- Độ rộng đường của MongoDB -->
+                    <p class="label2" style="display: inline-block;">?%</p>
+                </div>
+                <div class="container" style="color:aliceblue; text-align: center;">
+                    <p class="label2" style="display: inline-block;">Java</p>
+                    <div class="line" style="width: 350px;height: 20px; background-color: green;display: inline-block;"></div> <!-- Độ rộng đường của MongoDB -->
+                    <p class="label2" style="display: inline-block;">?%</p>
+                </div>    
+            </section>
+
+            <i id="m3"></i>
+            <h2 style="font-family: 'Lulo Clean', sans-serif; font-size: 70px; text-align: center; color:#f7f7fa">02 Experience</h2>
+            <section id="main_sec2" style="height:600px">
+                <div id="duongdocxanh"></div> <!-- Đường xanh lá -->
+                <div>
+                    <p style="text-align: right; margin-right: calc(50% + 20px);margin-left:150px">2023-08<scan>&#x1F34F;</scan></p> 
+                    <div style="text-align: right; margin-right: calc(50% + 50px);">
+                        <h3>Nhập học vào trường CMC</h3>
+                        <p><i>Môi trường và cách học tập thay đổi rất nhiều</i></p>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: left; margin-left: calc(50% + 20px);"><scan>&#x1F34F;</scan>2024-04</p> 
+                    <div style="text-align: left; margin-left: calc(50% + 50px);margin-right:150px">
+                        <h3>Thi olympic toán đại số</h3>
+                        <p><i>Vui thật, làm quen bạn mới, được đi trải nghiệm đây đó, được các thầy cô chỉ dạy rất chu đáo, thầy cô siêu siêu vuiii </i></p>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: right; margin-right: calc(50% + 20px);">2024-08<scan>&#x1F34F;</scan></p> 
+                    <div style="text-align: right; margin-right: calc(50% + 50px);margin-left:150px">
+                        <h3>Làm sự án về Trí Tuệ Nhân Tạo </h3>
+                        <p><i>Đề tài: Phát hiện xâm nhập mạng , sử dụng CNN, thuậ toán GA</i></p>
+                        <p><i>Nhiệm vụ bản thân: Làm sạch dữ liệu đầu vào, xây dựng mô hình CNN, đánh giá thử khi chưa có GA ; Làm báo cáo </i></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="f1">
+            <p><i>Thông tin liên hệ</i></p>
+            <p>Email: ...</p>
+            <p>Facebook: ...</p>
+            <p></p>
+        </footer>
+
+        <img src="huong.png" alt="Hình ảnh chạy" class="moving-image" id="movingImage">
+
+    </body>
+</html>
+

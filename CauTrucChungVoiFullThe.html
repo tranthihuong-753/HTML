@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> Tiêu đề 
+    <link> Liên kết tới ben ngoài (.CSS , ...)
+    <script></script> Liên kết tới .js
+    <style>
+/*         body{}
+        header{}
+        ...  */</style> Chứa nội dung giao diện của web
+</head>
+<body>
+    <header></header> Phần đầu (Tên web, slogen/giới thiệu gắn, link(Trang chủ, sản phẩm, dịch vj, liên hệ), ... )
+    <main></main> Thân (Tiêu đề bài viết, nội dung bài viết)
+    <aside></aside> Thông tin bên lề (Một số bài viết liên quan, ... )
+    <footer></footer> (Thông tin doanh nghiệp , bắt đầu từ năm bao nhiêu, liên hệ, ... )
+</body>
+</html>
+
+<article></article> Một đoạn văn
+<nav></nav> Chứa list liên kết 
+<section></section> Chứa 1 tiêu đề trong web -> Làm cho code sạch 
+
+<embed> Nhúng
+    <video></video>, <audio></audio>, <img>, <canvas></canvas>
+
+font-family: Arial, sans-serif; Đổi kiểu chữ
+
+<span>&#10084;</span> Hình trái tim 
+
+<select></select> TẠo thanh thả xuống để chọn 
+
+Thay đổi chiều cao dòng line-height <nâng cao của <br> >
+
+display: flex
+        #main_sec2 {
+            display: flex; /* Sử dụng flexbox để chia không gian */
+            /*Các phần tử trong main_Sec2 luôn ở trên 1 dòng*/
+        }
+
+text-align: right; sát vào lề bên phải 
+
+margin-right: calc(50% + 50px); sát bên phải (vách là 50% độ dài 1 dòng + 50px)
+
+Cho img cha chạy khắp 
+    <body> 
+        <img src="huong.png" alt="Hình ảnh chạy" class="moving-image" id="movingImage">
+    </body> 
+    <script>
+        const image = document.getElementById('movingImage');
+        let x = 0;
+        let y = 0;
+        let xSpeed = 4; // Tốc độ di chuyển theo trục x
+        let ySpeed = 3; // Tốc độ di chuyển theo trục y
+        function moveImage() {
+            // Cập nhật vị trí của hình ảnh
+            x += xSpeed;
+            y += ySpeed;
+            // Nếu hình ảnh chạm vào rìa của cửa sổ trình duyệt, đổi hướng
+            if (x + image.width >= window.innerWidth || x <= 0) {
+                xSpeed = -xSpeed; // Đổi hướng trục x
+            }
+            if (y + image.height >= window.innerHeight || y <= 0) {
+                ySpeed = -ySpeed; // Đổi hướng trục y
+            }
+            // Cập nhật vị trí của hình ảnh trên trang
+            image.style.left = x + 'px';
+            image.style.top = y + 'px';
+            // Yêu cầu trình duyệt gọi lại hàm moveImage trong khung tiếp theo
+            requestAnimationFrame(moveImage);
+        }
+        // Bắt đầu di chuyển hình ảnh
+        moveImage();
+    </script>
+
+Bo tròn border-radius: 15px;
+
+font-size: 20px; đổi cỡ chữ 
+
+text-decoration: none; bỏ gạch chân khi dùng thẻ <a>/a>
+
+overflow: hidden;             /* Ẩn phần tử tràn ra ngoài */
+
+filter: blur(5px);            /* Làm mờ ảnh với độ mờ 5px */
+
+display: flex;               /* Sử dụng flexbox cho nội dung bên trong */
+flex-direction: column;      /* Đặt các phần tử bên trong theo chiều dọc */
+align-items: center;         /* Căn giữa theo chiều ngang */
+
+id # 
+class . 
+
+background-image: url('https://i.pinimg.com/474x/44/f5/5a/44f55abd0983daf9ff691636b5add7d7.jpg');
+background-size: cover;  /* Để ảnh trải đều trong khung */
+background-position: center; /* Để ảnh căn giữa */
+

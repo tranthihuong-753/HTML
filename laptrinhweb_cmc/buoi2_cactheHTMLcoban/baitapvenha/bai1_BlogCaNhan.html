@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog về trà</title>
+    <style>
+        body{          
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: rgb(92, 73, 20);
+        }
+        header{
+            background-image: url('https://nld.mediacdn.vn/2019/9/14/green-tea-wallpaper-1024x575-15684521098182101477372.jpg');
+            background-size: cover; /* Làm cho hình nền phủ kín */
+            background-position: center; /* Canh giữa hình nền */
+            background-repeat: no-repeat; /* Không lặp lại hình nền */
+            color:#f1d7d7;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            height:600px;
+        }
+        header div a{           
+            text-decoration: none;
+            color: #f7f7f7; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(0, 0, 0); /* Màu nền trắng */
+            padding: 10px; /* Khoảng cách bên trong thẻ a */
+            border-radius: 5px; /* Bo tròn góc */
+            margin: 5px; /* Khoảng cách giữa các thẻ a */
+            display: inline-block; /* Đảm bảo mỗi thẻ a có kích thước riêng và không xuống dòng */      
+        }
+        footer{
+            background-color: rgb(248, 248, 248);
+            color: rgb(180, 63, 63);
+            text-align: center;
+        }
+    </style>
+    <style> /* cấu trúc tất cả các bài viết  */
+        #baiviet , #baimoinhat{
+            display: flex;             /* Sử dụng flexbox */
+            gap: 0px;                 /* Khoảng cách giữa các khối con */
+        }
+        #baiviet{
+            display: flex;             /* Sử dụng flexbox */
+            gap: 30px;                 /* Khoảng cách giữa các khối con */
+            justify-content: center;   /* Căn giữa nội dung theo chiều ngang */
+            width: 900;
+            height: 1000;
+            box-shadow: 2px 4px 6px rgba(177, 155, 42, 0.893); /* Đổ bóng */
+            padding: 30px;             /* Thêm khoảng cách bên trong khối */
+            flex-wrap: wrap;           /* Cho phép các khối con tự xuống dòng */
+        }
+        #baiviet div{
+            background-color: #e0e0e0; /* Màu nền của mỗi bài viết */
+            text-align: center;        /* Căn giữa nội dung trong mỗi div */
+            justify-content: center;   /* Căn giữa theo chiều ngang */
+            align-items: center;       /* Căn giữa theo chiều dọc */
+            width: 300px;              /* Chiều rộng của mỗi bài viết */
+            height: 300px;             /* Chiều cao của mỗi bài viết */
+            display: flex;             /* Để căn giữa nội dung bên trong */
+            border-radius: 8px;        /* Bo góc cho các khối */
+        }
+        #baimoinhat div{
+            width: 300px;                  /* Chiều rộng của mỗi bài viết */
+            height: 300px;                 /* Chiều cao của mỗi bài viết */
+            display: flex;                 /* Để căn giữa nội dung bên trong */
+            flex-direction: column;        /* Xếp các phần tử theo chiều dọc */
+            align-items: center;           /* Căn giữa theo chiều ngang */
+            justify-content: center;       /* Căn giữa theo chiều dọc */
+            border-radius: 50%;
+        }
+        .imgtrangon img{
+            width: 70%;                /* Đặt chiều rộng của ảnh */
+            height: 100%;               /* Đặt chiều cao của ảnh */
+            object-fit: cover;           /* Đảm bảo ảnh sẽ không bị méo khi nằm trong khung */
+        }
+        .imgmoi img{
+            width:100%;                /* Đặt chiều rộng của ảnh */
+            height: 100%;               /* Đặt chiều cao của ảnh */
+            object-fit: cover;           /* Đảm bảo ảnh sẽ không bị méo khi nằm trong khung */
+        }
+        .imgtrangon p{
+            width: 30%;                /* Đặt chiều rộng của ảnh */
+            height: 30%;               /* Đặt chiều cao của ảnh */
+            object-fit: cover;           /* Đảm bảo ảnh sẽ không bị méo khi nằm trong khung */
+        }
+
+    </style>
+    <!-- Phần binh luận --> 
+    <style>
+        blockquote{
+            margin: 0;
+            padding: 8px;
+            border-left: 4px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .binhluan .tten{
+            width: 25%; 
+            height: 25px;
+        }
+        .binhluan .tbinhluan{
+            width: 100%; 
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+        <p id="home"></p>
+        <div style="text-align: center;">
+            <a href="#home" style="color: rgb(126, 214, 147);text-decoration: none;display: flex; justify-content: center; position: fixed;  top: 0; left: 0;width: 100%; z-index: 1000; padding: 10px 0;">HOME</a>
+        </div> 
+        <br>
+        <header>
+            <br><br>
+            <h1 style="font-size: 100px;">It's Tea Time</h1>
+            <p><i>Cảm ơn ace vì đã ghé qua blog này</i></p>
+            <br>
+        </header>
+
+        <main>
+            <h2 style="font-size: 50px;color:#f1d7d7;font-family: 'Times New Roman', Times, serif; text-align: center;" >Mới nhất</h2>
+            <section id="baimoinhat">
+                <div class="imgmoi">
+                    <img src="https://i.pinimg.com/474x/37/40/ae/3740aea8a3ed9c4bed2f6d8c9fa1e5ac.jpg" alt="Ảnh cốc trà xanh" title="Trong các loại trà thì trà xanh thuộc hàng phổ biến nhất, với công dụng đặc biệt tốt cho cơ thể đã được khoa học chứng minh. Đây là loại trà được làm từ búp trà, lá trà, càng tươi non trà càng ngon, và đặc biệt là lá trà được diệt men (mức độ oxy hóa gần như là 0%). Trà xanh có vị chát tương đối êm dịu, để lại hậu ngọt dễ chịu. Nước trà màu xanh nhẹ hoặc hơi vàng. Trà xanh tốt cho việc giảm béo và thanh nhiệt cơ thể.">
+                    <p>Thượng hạng</p>
+                </div>
+                <div class="imgmoi">
+                    <img src="https://i.pinimg.com/736x/a4/d2/50/a4d250691e15496c8600300245681051.jpg" alt="Trà đen" title="Trà đen cũng được làm từ cùng loại lá với trà xanh nhưng lá trà được lên men gần 100%, nhờ đó lá trà có màu nâu đen, nước trà nâu đỏ sáng óng rất đẹp. Trà đen có vị khá nồng nàn và đậm đà, vị chát vẫn dịu nhưng sâu hơn">
+                    <p>Tuyệt hảo</p>
+                </div>
+                <div class="imgmoi">
+                    <img src="https://i.pinimg.com/474x/fe/30/9c/fe309c04c6b14c06101d2e0b338cf244.jpg" alt="Trà Oolong" title="Trà Oolong thường có dạng viên tròn nhỏ, có đuôi lá lộ ra một chút trông như con rồng đen (Ô Long). Đây là loại trà lên men bán phần, mức độ dao động từ 20 đến khoảng 90% nên có vị rất đặc biệt. Tuy vào vùng sản xuất, mức độ oxy hóa mà vị trà, nước trà có thể khác biệt. Nhưng về cơ bản, trà oolong thiên về thanh nhẹ, màu trà trong, hơi vàng. Trà Oolong rất được ưa chuộng tại Đài Loan, Nhật Bản.">
+                    <p>Mềm mại</p>
+                </div>
+                <div class="imgmoi">
+                    <img src="https://i.pinimg.com/474x/9e/2a/39/9e2a39c9752674778e1c0f5be154f3a0.jpg" alt="Trà San Tuyết" title="Trong các loại trà ngon hảo hạng, trà Shan Tuyết luôn được đánh giá cao. Loại trà này làm từ những lá non của cây trà cổ thụ, chỉ có tại các vùng núi cao cách mặt nước biển tới 1000m. Ở đây có khí hậu đặc biệt, nhiệt độ thay đổi trong ngày liên tục, tạo nên lá trà có hương vị độc đáo, trên lá còn phủ một lớp lông trắng li ti nên mới có tên gọi Shan Tuyết. Đây là đặc sản vùng cao ai cũng nên thử 1 lần, với nước trà tự nhiên mộc mạc nhưng để lại ấn tượng dài lâu.">
+                    <p>Tinh khiết</p>
+                </div>
+                <div class="imgmoi">
+                    <img src="https://file.hstatic.net/1000135323/file/5_tra_nhai_7fe0f21c7fcc43c78ff456a2b9660183_1024x1024.jpg" alt="Trà nhài" title="Trà nhài thực chất là trà xanh ướp thêm hoa nhài. Vẫn là vị trà chát nhẹ quen thuộc nhưng có thêm hương thơm ngọt ngào và thư giãn của hoa nhài, khiến nhiều người mê mẩn. Trà Nhài ngon nhất là khi được ướp từ hoa nhài tự nhiên đầu hè, theo cách thức dân gian.">
+                    <p>Quyết rũ</p>
+                </div>
+            </section>  
+
+            <h2 style="font-size: 50px;color:#f1d7d7;font-family: 'Times New Roman', Times, serif;" >Một số loại trà ngon</h2>
+            <section id="baiviet">
+                <div class="imgtrangon">
+                    <img src="https://i.pinimg.com/736x/69/e2/41/69e2411e853a1a58f33a4c86fe5d3676.jpg" alt="Ảnh cốc trà xanh" title="Trong các loại trà thì trà xanh thuộc hàng phổ biến nhất, với công dụng đặc biệt tốt cho cơ thể đã được khoa học chứng minh. Đây là loại trà được làm từ búp trà, lá trà, càng tươi non trà càng ngon, và đặc biệt là lá trà được diệt men (mức độ oxy hóa gần như là 0%). Trà xanh có vị chát tương đối êm dịu, để lại hậu ngọt dễ chịu. Nước trà màu xanh nhẹ hoặc hơi vàng. Trà xanh tốt cho việc giảm béo và thanh nhiệt cơ thể.">
+                    <p><b>Trà Xanh</b></p>
+                </div>
+                <div class="imgtrangon">
+                    <img src="https://i.pinimg.com/474x/11/d7/47/11d747929500b82146a172526e997904.jpg" alt="Trà đen" title="Trà đen cũng được làm từ cùng loại lá với trà xanh nhưng lá trà được lên men gần 100%, nhờ đó lá trà có màu nâu đen, nước trà nâu đỏ sáng óng rất đẹp. Trà đen có vị khá nồng nàn và đậm đà, vị chát vẫn dịu nhưng sâu hơn">
+                    <p><b>Trà đen</b></p>
+                </div>
+                <div class="imgtrangon">
+                    <img src="https://i.pinimg.com/474x/fe/30/9c/fe309c04c6b14c06101d2e0b338cf244.jpg" alt="Trà Oolong" title="Trà Oolong thường có dạng viên tròn nhỏ, có đuôi lá lộ ra một chút trông như con rồng đen (Ô Long). Đây là loại trà lên men bán phần, mức độ dao động từ 20 đến khoảng 90% nên có vị rất đặc biệt. Tuy vào vùng sản xuất, mức độ oxy hóa mà vị trà, nước trà có thể khác biệt. Nhưng về cơ bản, trà oolong thiên về thanh nhẹ, màu trà trong, hơi vàng. Trà Oolong rất được ưa chuộng tại Đài Loan, Nhật Bản.">
+                    <p><b>Trà Oolong</b></p>
+                </div>
+                <div class="imgtrangon">
+                    <img src="https://i.pinimg.com/474x/9e/2a/39/9e2a39c9752674778e1c0f5be154f3a0.jpg" alt="Trà San Tuyết" title="Trong các loại trà ngon hảo hạng, trà Shan Tuyết luôn được đánh giá cao. Loại trà này làm từ những lá non của cây trà cổ thụ, chỉ có tại các vùng núi cao cách mặt nước biển tới 1000m. Ở đây có khí hậu đặc biệt, nhiệt độ thay đổi trong ngày liên tục, tạo nên lá trà có hương vị độc đáo, trên lá còn phủ một lớp lông trắng li ti nên mới có tên gọi Shan Tuyết. Đây là đặc sản vùng cao ai cũng nên thử 1 lần, với nước trà tự nhiên mộc mạc nhưng để lại ấn tượng dài lâu.">
+                    <p><b>Trà San Tuyết</b></p>
+                </div>
+                <div class="imgtrangon">
+                    <img src="https://file.hstatic.net/1000135323/file/5_tra_nhai_7fe0f21c7fcc43c78ff456a2b9660183_1024x1024.jpg" alt="Trà nhài" title="Trà nhài thực chất là trà xanh ướp thêm hoa nhài. Vẫn là vị trà chát nhẹ quen thuộc nhưng có thêm hương thơm ngọt ngào và thư giãn của hoa nhài, khiến nhiều người mê mẩn. Trà Nhài ngon nhất là khi được ướp từ hoa nhài tự nhiên đầu hè, theo cách thức dân gian.">
+                    <p><b>Trà nhài</b></p>
+                </div>
+                <div class="imgtrangon">
+                    <img src="https://file.hstatic.net/1000135323/file/7_ba_tuoc_27ca49a38daa42deb75f5ce5bd43b6f6_1024x1024.jpg" alt="Trà bá tước" title="Trà Bá Tước là sự kết hợp giữa trà đen Ceylon với tinh dầu cam Bergamot, tươi mới, sảng khoái và độc đáo. Loại trà này rất phổ biến tại các nước châu Âu, đặc biệt là tại Anh, được dùng trong các bữa sáng hoặc tiệc trà chiều mỗi ngày.">
+                    <p><b>Trà bá tước</b></p>
+                </div>
+            </section>            
+        </main>
+
+        <footer>
+            <p style="font-size: 20px;"><i>Rep mọi lúc</p>
+            <p><i style="color:aliceblue; font-size: 2px;">khi thực sự cần</i></p>
+            <p></p>
+        </footer>
+</body>
+</html>
