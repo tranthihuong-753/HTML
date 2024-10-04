@@ -1,0 +1,151 @@
+#h1{
+    background-color: black; /* Nen den */
+    text-align: center; /* text o vi tri giua hang */
+    font-family: 'Inknut Antiqua', serif;
+    height: 30px;
+    width: 100%;
+    display: flex; /* Sử dụng Flexbox để định dạng phần tử con bên trong theo hàng hoặc cột */
+    justify-content: center; /* Căn giữa nội dung theo trục ngang (giữa từ trái sang phải) */
+    align-items: center; /* Căn giữa nội dung theo trục dọc (giữa từ trên xuống dưới) */    
+}
+#h1 p{
+    display: none; /* Ẩn tất cả các thẻ <p> */ 
+    margin: 0;
+    color:white; /* Chu mau trang */
+}
+#h1 p.active {
+    display: block; /* Chỉ hiển thị (block) các thẻ <p> có class 'active'*/  
+}
+
+
+
+#h2{
+    background-color:#404c3d;
+    color:white;
+    display: flex;
+    position: fixed; /* Cố định vị trí */
+    top: 30px; /* Đặt ở đầu trang */
+    left: 0; /* Đặt ở bên trái */
+    right: 0; /* Đặt ở bên phải */
+}
+#h2_left{
+    color:white;
+    font-family: 'Joan', sans-serif;
+    display: flex;
+    width: 70%;
+    justify-content: space-between; /* Cách đều giữa các phần tử */
+    padding-left: 30px; /* Cach trái 30px */
+    padding-right: 30px; /* Cách phải 30px */
+    text-decoration: none;
+}
+
+#h2_right{
+    color:white;
+    margin-left: auto;
+    width: 30%;
+    text-align: center;
+}
+
+#h3{
+    background-image: url('..\\images\\coc_matcha_heaader.jpg'); /* Đặt hình ảnh làm hình nền */
+    height: 550px;
+    background-size: cover; /* Phủ kín hình nền */
+    background-color:#404c3d;
+}
+
+#m1{
+    background-color:#404c3d;
+}
+
+#m1_a{
+    display: flex;    
+}
+#m1_a_left{
+    width: 65%;
+}
+#m1_a_right{
+    width: 45%;
+}
+
+
+
+#m2{
+    background-color: #95ae8f;
+    height: 550px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+#m2_a{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#m2_aa, #m2_ab, #m2_ac{
+    background-color: beige;
+    height: 300px;
+    width: 30%;
+}
+
+
+
+#m3_a{
+    display: flex;
+    height: 750px;
+    gap: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.m3_ac{
+    height: 100px;
+    width: 100%;
+}
+.m3_ac1{
+    width: 100%;
+    aspect-ratio: 1; /* Đảm bảo chiều rộng bằng chiều cao */
+}
+.m3_ac1 img{
+    width: 100%;
+    aspect-ratio: 1; /* Đảm bảo chiều rộng bằng chiều cao */
+    border-radius: 80%; /* Bo tròn góc cho ô */
+    text-align: center;
+}
+
+
+
+#d_a{
+    display: flex;
+    height: 450px;
+    width: 100%;
+}
+#d_a1{
+    width: 65%;
+    
+}
+#d_a2{
+    width: 45%;
+}
+#d_a1a{
+    display: flex;
+    height: 100px;
+}
+#d_a1a input{
+    width: 70%;
+}
+#d_a1a img{
+    width: 20%;
+    height: 90px;
+    margin-left: 30px;
+}
+
+#d_a1b{
+    display: flex;
+    height: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: space-between;
+}
