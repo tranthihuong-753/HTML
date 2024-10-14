@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        #test{
+            animation-name: trans;
+            animation-duration: 2s; /* chu ky */
+            animation-delay: 1s; /* TG cho truoc khi ani */
+        }
+        @keyframes trans{
+            from{
+                background-color: yellow;
+                rotate: 45deg;
+                border-radius: 10%;
+                transform: scale(5, 4);
+            }
+            50%{
+                background-color: aquamarine;
+                rotate: 90deg;
+                border-radius: 25%;
+                transform: scale(3, 2);
+            }
+            to{
+                background-color: brown;
+                rotate: 180deg;
+                border-radius: 50%;
+                transform: scale(2, 1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+</body>
+</html>

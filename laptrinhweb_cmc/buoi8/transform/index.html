@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            height: 200px;
+        }
+        div{
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+        }
+        #moon{
+            position:relative;
+            margin: auto; 
+            top:10%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            box-shadow: 5px 2px 0 0px coral;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box1" style="background-color: aquamarine;"></div>
+    <div id="box2" style="background-color: blueviolet;"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="moon"></div>
+</body>
+</html>

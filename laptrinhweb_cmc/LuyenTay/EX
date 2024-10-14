@@ -1,0 +1,6 @@
+Làm giao diện web như link 
+https://future-tech.monamedia.net/
+
+position: fixed; /* Luon co dinh du trang web chuyen dong*/
+
+position: absolute; /* Chèn lên gia diện ban đầu */

@@ -1,0 +1,13 @@
+transform: rotate(30deg) // quay 30 do 
+           scale(1.5, 2) // x1.5 truc x , x2 truc y 
+           skew(30deg, 45deg) // nghieng 30 do theo truc x, nghieng 45 do theo truc y
+
+position: static // mac dinh, khong the su dung top, right, bottom, red
+          relaytive // mac dinh, co the su dung top, right, bottom, red
+          sticky // di chuyen cho toi khi toi gioi han 
+          absolute // bi loai khoi dong chay tai lieu , co th eghi de cac phan tu khac, co the su dung top, right, bottom, red 
+          fixed 
+
+transition // thay doi muot hon 
+
+

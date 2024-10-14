@@ -5,32 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-/*         #a{
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            padding: 20px;
+        }
+        .item{
+            background-color: rgb(169, 232, 234);
+            border: 1px solid rgb(225, 33, 33);
+            min-height:50px;
+        }
+        .container{
             display: grid;
-            grid-template-columns: 100px 50px;
-            grid-template-rows: 20px 40px;
-            grid-auto-flow: column;
-            grid-auto-columns: 150px;
-            grid-auto-rows: 100px;
+            /* grid-template-columns: 300px 100px; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(60px, auto);
+
+            grid-template-areas: 
+                "aa aa aa" 
+                "bb b1 b1"
+                "cc c1 c1"
+                "dd dd dd";
             
-        } */
-        .grid-container{
-            background-color: cadetblue;
-            display: inline-grid;
+            column-gap: 10px;
+            row-gap: 20px;
+        }
+        .item-5{
+/*             grid-column-start: 2;
+            grid-column-end: 4; */
+            /* grid-column: 2/4 */
+            grid-column: span 2;
+            /* grid-area : aa;  */
+        }
+        .item-4{
+/*             grid-row-start: 2;
+            grid-row-end: 4;
+            grid-row: 2/4; */
+            grid-area: bb;
+        }
+        .item-1{
+            grid-area: b1;
+        }
+        .item-2{
+            grid-area: c1;
+        }
+        .item-3{
+            grid-column:1/4;
         }
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-      </div>
+    <div class="container">
+        <div class="item-1 item">1</div>
+        <div class="item-2 item">2. CSS Grid là một công cụ rất mạnh mẽ giúp chúng ta có thể bố cục các thành phần HTML. Với việc sử dụng CSS Grid sẽ giúp chúng ta dễ dàng bố cục các element trên trang web từ những layout cơ bản cho tới các layout phức tạp</div>
+        <div class="item-3 item">3</div>
+        <div class="item-4 item">4</div>
+        <div class="item-5 item">5</div>
+    </div>
 </body>
 </html>
+

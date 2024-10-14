@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:#4caf4f;
+            --secondary-color:#263238;
+            --info-color:#2194f3;
+            --background-color:#E0E0E0;
+
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            
+        }
+        body{
+            font-size: 12px;
+        }
+        header{
+            display: flex;
+            /* Cac phan tu theo dang space-between nhung luon cah nhau >= 20px */
+            justify-content: space-between;
+            gap:20px;
+
+            align-items: center;
+            background-color: var(--background-color);
+
+            flex-wrap: wrap;
+
+            padding-bottom: 5px; /* Su Ly Loi : Khi thu nho width thi phan tu xuong dong dinh sat vao vien header -> xau */
+        }
+        a{
+            text-decoration: none;
+            color: black;
+
+        }
+        button{
+            color: #4caf4f;
+            background-color: azure;
+            border: none;
+            border-radius: 7px;
+            height: 30px;
+            width: 60px;
+            cursor: pointer; /* Hiển thị con trỏ chuột như tay khi di chuột qua nút */
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;      
+            flex: 1;  
+        }
+        #header-menu{
+            list-style: none;
+            font-size: 1.1rem;
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        #login-info{
+            display: flex;
+            justify-content: center;
+            flex:1;
+            gap: 20px;
+        }
+
+        #m1{
+            display: flex;
+        }
+        #left_m1{
+            flex: 7;
+        } 
+        #right{
+            flex: 4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="id hd"></div>
+            <div id="logo">
+                <a href="#"><img src="https://www.svgrepo.com/show/530596/diving-goggles.svg" style="height: 50px;"></a>
+                <h3>Nextcent</h3>
+            </div>
+            <nav id="header-menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#feature">Feature</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </nav>
+            <div id="login-info">
+                <button id="login-in">LOGIN</button>
+                <button id="login-up">SIGN UP</button>
+            </div>
+        </div>
+        <div class="hd2 hd"></div>
+        <div class="hd3 hd"></div>
+    </header>
+    <main>
+        <div id="m1">
+            <div id="left_m1">
+                <h1 style="font-size: 50px;">
+                    Lessons and insights 
+                    <br>from 8 years
+                </h1>
+                <b>...........</b>
+            </div>
+            <div id="right_m1">
+                <img src="..\\images\\hoasen.png" style="width: 90%;">
+            </div>
+        </div>
+    </main>
+    <header></header>
+</body>
+</html>
