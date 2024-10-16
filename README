@@ -1,0 +1,48 @@
+text-decoration: none; /* Bỏ gạch chân */
+text-align: ; căn trái , phải, trung tâm, ...   
+
+aspect-ratio: 1; /* Đảm bảo chiều rộng bằng chiều cao */
+
+border-radius: 4px; /* Bo tròn góc cho ô */
+border: 1px solid #ccc; /* Đường viền cho ô */
+
+Border-style​ tạo cái hộp với kiểu viền 
+border-width chỉ định độ rộng viền
+
+margin-right: 30px; /* Khoảng cách bên phải là 30px */
+margin-top: 50px; /* Khoảng cách bên trên là 50px */
+margin-bottom: 60px; /* Khoảng cách bên dưới là 60px */
+margin-left: 20px; /* Khoảng cách bên trái là 20px */
+
+position: fixed; /* Cố định vị trí */
+
+justify-content: space-between; /* Cách đều giữa các phần tử theo hàng ngang */
+
+<link rel="stylesheet" href="..\CSS\header.css">
+<script src="..\js\thaydoinoidung_h1.js" defer></script>
+<iframe src="file.html" width="100%" height="500px"></iframe>
+<iframe src="file.html" width="100%" height="500px"></iframe> // nhung file 
+
+overflow: auto nội dung tràn bị cắt bới, thanh cuộn chỉ được thêm vào khi nội dung thực sự tràn 
+          scroll nội dung tràn bị cắt bới, thanh cuộn được thêm vào 
+
+padding: ? ? ? ?; // tren phai duoi trai 
+
+display: block ; // hiện theo width, height 
+       : inline // hiện theo text 
+
+transform: rotate(30deg) // quay 30 do 
+           scale(1.5, 2) // x1.5 truc x , x2 truc y 
+           skew(30deg, 45deg) // nghieng 30 do theo truc x, nghieng 45 do theo truc y
+
+position: static // mac dinh, khong the su dung top, right, bottom, red
+          relaytive // mac dinh, co the su dung top, right, bottom, red
+          sticky // di chuyen cho toi khi toi gioi han 
+          absolute // bi loai khoi dong chay tai lieu , co th eghi de cac phan tu khac, co the su dung top, right, bottom, red 
+          fixed 
+
+transition // thay doi muot hon 
+
+position: fixed; /* Luon co dinh du trang web chuyen dong*/
+
+position: absolute; /* Chèn lên gia diện ban đầu */
