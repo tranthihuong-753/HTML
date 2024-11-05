@@ -1,0 +1,5 @@
+Document Object Model DOM 
+
+HTML tạo nọi dung, cấu trúc cho page. DOM được tạo ra khi page chạy và biến all element thành objects để JavaScript có thể thao tác, sửa đổi, xóa, thêm. 
+
+- When a page loaded, the browser create DOM of page, as a tree of object  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="mybody">
+    <div id="my-container" class="container" name="ctner">
+        <p>My home page</p>
+        <!--Sử dụng cú pháp Emmet : p*2{para $} -->
+        <p>para 1</p>
+        <p>para 2</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        /* Finding HTML element */
+        const body = document.getElementsByTagName("body");
+        const container1 = document.getElementsByTagName('div');
+        const container2 = document.getElementsByClassName("container");
+        const container3 = document.getElementsByName("ctner");
+        const container4 = document.getElementById("my-container");
+        container4.style.color = "red";
+        container4.style.backgroundColor = "rgb(243, 210, 167)";
+        container4.classList.toggle("container"); /* đã có -> ẩn , chưa có -> tạo */
+        container4.innerHTML += "<h3>new content</h3>";
+
+        const container5 = document.querySelectorALl("ul li");
+    </script>
+    <a href="#" onclick="alert('Hello')" id="btn">Click</a>
+    <script>
+        const btn = document.getElementById("btn");
+        function hello(){
+            alert("Xin chao moi nguoi");
+        }
+        //btn.onclick = alert("Xin chao");
+        //btn.onclick = hello();
+        //btn.addEventListener('click', hello());
+    </script>
+</body>
+</html>
+
+
